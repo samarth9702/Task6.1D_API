@@ -67,8 +67,8 @@ def index():
 @app.route('/getQuiz', methods=['GET'])
 def get_quiz():
     global new_model_adapter
-    if new_model_adapter is None:
-        return jsonify({'error': 'Model adapter not initialized'}), 500
+    # if new_model_adapter is None:
+    #     return jsonify({'error': 'Model adapter not initialized'}), 500
     student_topic = request.args.get('topic')
     if student_topic is None:
         return jsonify({'error': 'Missing topic parameter'}), 400
