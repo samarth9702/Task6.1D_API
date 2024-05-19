@@ -79,7 +79,7 @@ def prepareLlamaBot(name):
     gradient = Gradient()
     base_model = gradient.get_base_model(base_model_slug="llama2-7b-chat")
     global new_model_adapter
-    new_model_adapter = base_model.create_model_adapter(name=shreya)
+    new_model_adapter = base_model.create_model_adapter(name=name)
 
 
 
@@ -92,6 +92,6 @@ if __name__ == '__main__':
 
     port_num = 5000
     print(f"Starting Llama bot with name {args.name}...\n This may take a while.")
-    prepareLlamaBot(args.name)
+    prepareLlamaBot("shreya")
     print(f"App running on port {port_num}")
     app.run(port=port_num)
